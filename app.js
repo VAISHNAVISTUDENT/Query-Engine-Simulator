@@ -62,7 +62,7 @@ app.post('/validate', (req, res) => {
 app.all('*', (req, res) => {
     res.send("No such Page")
   });
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
